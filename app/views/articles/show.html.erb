@@ -1,10 +1,13 @@
-<p>
-  <strong>Host:</strong>
-  
-</p>
+  <% @host.each do |host| %>
+    <tr>
+      ip:<td><%= host.ip %></td>
 
-<p>
-  <strong>Port:</strong>
-  
-</p>
-<%= link_to 'Back', '/articles'%>
+      port:<td><%= host.port %></td>
+      version:<td><%= host.version %></td>
+      service:<td><%= host.service %></td>
+      <br/>
+   
+   <% end %>    
+
+    </tr>
+<%= link_to 'Back', '/articles' %>

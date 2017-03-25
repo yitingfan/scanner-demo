@@ -27,6 +27,7 @@ class ArticlesController < ApplicationController
 		@host=Host.where("created_at=#{@time}")
 		@host.each do|i|
 			puts i.ip
+			puts i.port
 		end	
 	end	
 end

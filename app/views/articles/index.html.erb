@@ -1,0 +1,22 @@
+<h1>Listing articles</h1>
+
+
+<%= link_to '扫描任务新建', "/articles/new" %>
+
+<table>
+  <tr>
+    <th>主机列表</th>
+    
+  </tr>
+
+  <% @hosts.each do |host| %>
+    <tr>
+      <td><%= host.ip %></td>
+
+      <td><%= host.created_at%></td>
+
+       <td><%= link_to 'Show',"/articles/\'#{host.created_at}\'" %></td>
+
+    </tr>
+  <% end %>
+</table>

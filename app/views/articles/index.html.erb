@@ -1,11 +1,11 @@
-<h1>Listing articles</h1>
+<h1>扫描列表</h1>
 
 
 <%= link_to '扫描任务新建', "/articles/new" %>
 
 <table>
   <tr>
-    <th>主机列表</th>
+    
     
   </tr>
 
@@ -13,7 +13,7 @@
     <tr>
       <td><%= host.ip %></td>
 
-      <td><%= host.created_at%></td>
+      <td><%= host.created_at.strftime("%Y-%m-%d")%></td>
 
        <td><%= link_to 'Show',"/articles/\'#{host.created_at}\'" %></td>
 

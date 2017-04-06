@@ -4,14 +4,15 @@ class ArticlesController < ApplicationController
 	end
 
 	def create
-		@host=params[:host]   
-		puts @host
-		NmapWorker.perform_async(params[:host])
-	end
 
-	#def show1
-	#	puts "******"
-	#end	
+		@host=Host.create ip: params[:host].ip
+
+		NmapWorker.perform_async(@host.id) 
+		
+
+		redirect_to "/articles/show/#{@host.created_at.to_s}"
+	end
+	
 	
 	def index
 		#@hosts=Host.all
@@ -24,7 +25,7 @@ class ArticlesController < ApplicationController
 		@time=params[:created_at]
 		puts @time
 		#@host = Host.find(:created_at=>params[:created_at])
-		@host=Host.where("created_at=#{@time}")
+		@host=Host.where("created_at='#{@time}'")
 		@host.each do|i|
 			puts i.ip
 			puts i.port

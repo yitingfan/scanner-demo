@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE nmaprun>
 <?xml-stylesheet href="file:///usr/local/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
-<!-- Nmap 7.40 scan initiated Sat Mar 25 18:46:54 2017 as: /usr/local/bin/nmap -sT -F -oX scan.xml 192.168.22.10 -->
-<nmaprun scanner="nmap" args="/usr/local/bin/nmap -sT -F -oX scan.xml 192.168.22.10" start="1490438814" startstr="Sat Mar 25 18:46:54 2017" version="7.40" xmloutputversion="1.04">
+<!-- Nmap 7.40 scan initiated Sun Apr  2 14:56:26 2017 as: /usr/local/bin/nmap -sT -F -oX scan.xml 127.0.0.1 -->
+<nmaprun scanner="nmap" args="/usr/local/bin/nmap -sT -F -oX scan.xml 127.0.0.1" start="1491116186" startstr="Sun Apr  2 14:56:26 2017" version="7.40" xmloutputversion="1.04">
 <scaninfo type="connect" protocol="tcp" numservices="100" services="7,9,13,21-23,25-26,37,53,79-81,88,106,110-111,113,119,135,139,143-144,179,199,389,427,443-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2000-2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5060,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
 <verbose level="0"/>
 <debugging level="0"/>
-<host starttime="1490438814" endtime="1490438814"><status state="up" reason="syn-ack" reason_ttl="0"/>
-<address addr="192.168.22.10" addrtype="ipv4"/>
+<host starttime="1491116186" endtime="1491116186"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="127.0.0.1" addrtype="ipv4"/>
 <hostnames>
+<hostname name="localhost" type="PTR"/>
 </hostnames>
 <ports><extraports state="closed" count="97">
 <extrareasons reason="conn-refused" count="97"/>
 </extraports>
-<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" method="table" conf="3"/></port>
-<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
-<port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="rpcbind" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3000"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ppp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="mysql" method="table" conf="3"/></port>
+<port protocol="tcp" portid="10000"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="snet-sensor-mgmt" method="table" conf="3"/></port>
 </ports>
-<times srtt="837" rttvar="258" to="100000"/>
+<times srtt="707" rttvar="172" to="100000"/>
 </host>
-<runstats><finished time="1490438814" timestr="Sat Mar 25 18:46:54 2017" elapsed="0.14" summary="Nmap done at Sat Mar 25 18:46:54 2017; 1 IP address (1 host up) scanned in 0.14 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+<runstats><finished time="1491116186" timestr="Sun Apr  2 14:56:26 2017" elapsed="0.10" summary="Nmap done at Sun Apr  2 14:56:26 2017; 1 IP address (1 host up) scanned in 0.10 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
 </runstats>
 </nmaprun>

@@ -1,7 +1,7 @@
 <h1>扫描列表</h1>
 
 
-<%= link_to '扫描任务新建', "/articles/new" %>
+<%= link_to '新建任务', "/articles/new" %>
 
 <table>
   <tr>
@@ -15,7 +15,7 @@
 
       <td><%= host.created_at.strftime("%Y-%m-%d")%></td>
 
-       <td><%= link_to 'Show',"/articles/\'#{host.created_at}\'" %></td>
+       <td><%= link_to 'Show',"/articles/show/#{host.created_at}" %></td>
 
     </tr>
   <% end %>

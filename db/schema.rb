@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170324082100) do
+ActiveRecord::Schema.define(version: 20170402053237) do
 
   create_table "hosts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "ip"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20170324082100) do
     t.datetime "updated_at", null: false
     t.string   "protocal"
     t.string   "state"
+    t.integer  "task_id"
   end
 
 end

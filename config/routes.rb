@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   get 'hello/index'
-  #
- #resources :articles
+  
+ 
  
  get '/articles',to: 'articles#index'
  get '/articles/new',to: 'articles#new'
- get '/articles/:created_at',to: 'articles#show'
+ get '/articles/show/:created_at',to: 'articles#show'
  post '/articles',to: 'articles#create'
 
 
@@ -13,7 +13,6 @@ Rails.application.routes.draw do
   SidekiqDemo::Application.routes.draw do
   get 'hello/index'
 
-  get "hello/index"
   require 'sidekiq/web'
   mount Sidekiq::Web => '/sidekiq'
 end
